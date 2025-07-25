@@ -1,0 +1,30 @@
+export type FlattenedItem = {
+  name: string;
+  material_id: string;
+  color: {
+    color: string;
+    colors_id: number;
+    created_at: number;
+    deleted_at: string | null;
+    is_deleted: string | null;
+    name: string;
+    pantone: string;
+    updated_at: number;
+  } | null;
+  code: string;
+  last_price: number;
+  min_amount: null;
+  category: string;
+  parent: string;
+  unit: string;
+  width: string;
+  remind_start_amount: number;
+  remind_start_sum: number;
+  remind_income_amount: number;
+  remind_income_sum: number;
+  remind_outgo_amount: number;
+  remind_outgo_sum: number;
+  remind_end_amount: 0;
+  remind_end_sum: 0;
+  children?: FlattenedItem[];
+};
