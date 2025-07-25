@@ -1,10 +1,10 @@
 import Axios from "axios";
 import { dispatch, getState } from "../store";
 
-// export const BASE_URL = "http://apialfa.apoint.uz/";
+export const BASE_URL = "http://apialfa.apoint.uz/";
 
 export const axiosInstance = Axios.create({
-  // baseURL: BASE_URL + "",
+  baseURL: BASE_URL,
 
   headers: {
     Accept: "application/json",
