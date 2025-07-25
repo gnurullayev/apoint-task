@@ -4,7 +4,7 @@ import { dispatch, getState } from "../store";
 export const BASE_URL = "http://apialfa.apoint.uz/";
 
 export const axiosInstance = Axios.create({
-  baseURL: BASE_URL,
+  baseURL: BASE_URL + "v1/",
 
   headers: {
     Accept: "application/json",
@@ -46,13 +46,13 @@ export const API = {
   //AUTH
   login: (data: any) =>
     axiosInstance
-      .post("v1/hr/user/sign-in?include=token", data)
+      .post("hr/user/sign-in?include=token", data)
       .then((res) => res.data),
   logOut: () => axiosInstance.post("logout").then((res) => res.data),
 
   //MATERIALS
   materials: (params: any) =>
     axiosInstance
-      .get("v1/reports/reports/materials", { params })
+      .get("reports/reports/materials", { params })
       .then((res) => res.data),
 };
